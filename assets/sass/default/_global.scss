@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+  @include box-sizing;
+  padding: 0;
+  margin: 0;
+}
+
+html { scroll-behavior: smooth; }
+span { display: inline-block; }
+::first-letter { text-transform: uppercase; }
+
+body {
+  font-family: sans-serif;
+  @include box-sizing;
+}
+
+a { 
+  display: inline-block;
+  text-decoration: none; 
+  @include transition;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 86%; 
+  margin: 0 auto;
+}

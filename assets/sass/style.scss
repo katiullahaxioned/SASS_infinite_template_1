@@ -1,0 +1,14 @@
+// ===== Default ===== //
+@import "./default/variable";
+@import "./default/mixin";
+@import "./default/reset";
+@import "./default/global";
+
+// ===== Pages ===== //
+@import "./pages/home/header";
+@import "./pages/home/banner";
+@import "./pages/home/what-we-do";
+@import "./pages/home/testimonials";
+@import "./pages/home/gallery";
+@import "./pages/home/contact-us";
+@import "./pages/home/footer";
