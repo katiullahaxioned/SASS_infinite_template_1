@@ -4,18 +4,22 @@
   $blueLight: #3172A3;
   $blueMid: #336799;
   $blueDark: #355372;
-  $grey: #A4ADAF;
+  $greyLight: #A4ADAF;
+  $greyMid: #666;
+  $greyDark: #333;
 
 // ===== FontAwesome ===== //
   $arrowDown: \f063;
-  $analysis: \f080;
-  $support: \f0e6;
-  $security: \f132;
-  $socialWork: \f0c0;
-  $chatOnline: \f0e5;
-  $mail: \f003;
-  $location: \f041;
-  $phone: \f098;
+  $servicesIcon : (1: \f080, 2: \f0e6, 3: \f132, 4: \f0c0);
+  // $analysis: \f080;
+  // $support: \f0e6;
+  // $security: \f132;
+  // $socialWork: \f0c0;
+  $contactIcon : (1: \f0e5, 2: \f003, 3: \f041, 4: \f098);
+  // $chatOnline: \f0e5;
+  // $mail: \f003;
+  // $location: \f041;
+  // $phone: \f098;
 
 // ===== Breakpoints ===== //
   $bigDevice: 1920;

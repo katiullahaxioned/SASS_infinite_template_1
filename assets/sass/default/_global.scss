@@ -8,7 +8,7 @@
 
 html { scroll-behavior: smooth; }
 span { display: inline-block; }
-p { line-height: 1.5; }
+p { line-height: 2; }
 p::first-letter { text-transform: uppercase; }
 body {
   font-family: sans-serif;
@@ -24,6 +24,32 @@ a {
 li {
   display: inline-block;
   list-style-type: none;
+}
+
+.section-title {
+  color: $blueLight;
+  font-size: 43px;
+  text-transform: capitalize;
+}
+
+.section-para {
+  color: $greyMid;
+  font-size: 18px;
+  word-spacing: 3px;
+}
+
+.button {
+  text-transform: capitalize;
+  color: $white;
+  font-size: 19px;
+  background-color: $blueMid;
+  padding: 14px 30px;
+
+  &:hover {
+    background-color: $white;
+    color: $blueLight;
+    @include box-shadow(inset 0 0 0 3px $blueLight);
+  }
 }
 
 /*for wrapper*/
