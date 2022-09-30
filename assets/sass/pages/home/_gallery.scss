@@ -1,0 +1,55 @@
+.gallery {
+  &__wrapper {
+    padding: 109px 0 94px;
+    @include flex-center;
+    @include flex-direction(column);
+  }
+
+  &__lists {
+    padding: 0 2% 0 .5%;
+    gap: 31px;
+    @include flex-center;
+    
+    &--item {
+      overflow: hidden;
+
+      img { @include transition; }
+
+      &:hover img {
+        @include transform(scale(1.1));
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    right: 10px;
+  }
+  
+  &__para {
+    width: 53%;
+    margin: 22px 0 83px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__controls {
+    margin-top: 46px;
+    position: relative;
+    right: 8px;
+    gap: 29px;
+    @include flex-center;
+
+    li {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: $greyLight;
+      text-indent: -99999px;
+      @include transition;
+
+      &:first-child { background-color: $blueLight; }
+      &:hover { background-color: $blueLight; }
+    }
+  }
+}

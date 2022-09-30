@@ -443,7 +443,9 @@ li {
 }
 .testimonials__controls {
   margin-top: 63px;
-  gap: 29px;
+  position: relative;
+  right: 3px;
+  gap: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,8 +457,8 @@ li {
   justify-content: center;
 }
 .testimonials__controls li {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background-color: #A4ADAF;
   text-indent: -99999px;
@@ -469,6 +471,90 @@ li {
 }
 .testimonials__controls li:hover {
   background-color: #fff;
+}
+
+.gallery__wrapper {
+  padding: 109px 0 94px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.gallery__lists {
+  padding: 0 2% 0 0.5%;
+  gap: 31px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.gallery__lists--item {
+  overflow: hidden;
+}
+.gallery__lists--item img {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.gallery__lists--item:hover img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.gallery__title {
+  position: relative;
+  right: 10px;
+}
+.gallery__para {
+  width: 53%;
+  margin: 22px 0 83px;
+  font-size: 14px;
+  text-align: center;
+}
+.gallery__controls {
+  margin-top: 46px;
+  position: relative;
+  right: 8px;
+  gap: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.gallery__controls li {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #A4ADAF;
+  text-indent: -99999px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.gallery__controls li:first-child {
+  background-color: #3172A3;
+}
+.gallery__controls li:hover {
+  background-color: #3172A3;
 }
 
 .services__wrapper {

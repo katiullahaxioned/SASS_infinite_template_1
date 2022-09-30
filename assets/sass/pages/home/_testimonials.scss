@@ -52,12 +52,14 @@
 
   &__controls {
     margin-top: 63px;
-    gap: 29px;
+    position: relative;
+    right: 3px;
+    gap: 30px;
     @include flex-center;
 
     li {
-      width: 16px;
-      height: 16px;
+      width: 15px;
+      height: 15px;
       border-radius: 50%;
       background-color: $greyLight;
       text-indent: -99999px;
