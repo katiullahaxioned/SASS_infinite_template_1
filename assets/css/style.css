@@ -110,7 +110,11 @@ span {
   display: inline-block;
 }
 
-::first-letter {
+p {
+  line-height: 1.5;
+}
+
+p::first-letter {
   text-transform: uppercase;
 }
 
@@ -240,6 +244,108 @@ li {
 }
 .header__nav--menu a:hover {
   border-color: #fff;
+}
+
+.banner__wrapper {
+  width: 100%;
+  height: 117vh;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.banner__figure {
+  width: 100%;
+  height: 100%;
+}
+.banner__figure img {
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+.banner__content {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  position: absolute;
+  top: 43.1%;
+  left: 49.4%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.banner__title {
+  margin-bottom: 11px;
+  font-size: 58px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px #000;
+}
+.banner__para {
+  margin: 8px 0;
+  font-size: 20px;
+}
+.banner__indicator {
+  position: absolute;
+  bottom: 97px;
+  left: 45.3%;
+}
+.banner__indicator span {
+  padding: 11px 56px;
+  position: relative;
+  background-color: #355372;
+  color: #fff;
+  cursor: pointer;
+  font-size: 42px;
+  text-indent: -99999px;
+}
+.banner__indicator span::before {
+  content: "\f063";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "fontAwesome";
+  text-indent: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.banner__indicator span:hover::before {
+  -webkit-animation: indicate 0.3s linear;
+  animation: indicate 0.3s linear;
+}
+@-webkit-keyframes indicate {
+  0%, 100% {
+    top: 50%;
+  }
+  40% {
+    top: 40%;
+  }
+  70% {
+    top: 60%;
+  }
+}
+@keyframes indicate {
+  0%, 100% {
+    top: 50%;
+  }
+  40% {
+    top: 40%;
+  }
+  70% {
+    top: 60%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
