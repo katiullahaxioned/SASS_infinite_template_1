@@ -375,6 +375,102 @@ li {
   }
 }
 
+.testimonials__wrapper {
+  width: 100%;
+  padding: 97px 0 164px;
+  background-image: url("../../../../assets/images/bg-testimonials.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.testimonials__title {
+  color: #fff;
+}
+.testimonials__para {
+  width: 50%;
+  margin: 22px 0 83px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+.testimonials__lists {
+  width: 71.3%;
+  color: #fff;
+  gap: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.testimonials__figure {
+  width: 127px;
+  height: 127px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+.testimonials__comment {
+  padding: 0 10px 0 0;
+  margin: 35px 0 17px;
+  line-height: 1.65;
+  font-size: 17px;
+}
+.testimonials__name {
+  display: block;
+  font-size: 18px;
+  font-style: italic;
+  text-align: right;
+  text-transform: capitalize;
+}
+.testimonials__controls {
+  margin-top: 63px;
+  gap: 29px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.testimonials__controls li {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #A4ADAF;
+  text-indent: -99999px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.testimonials__controls li:first-child {
+  background-color: #fff;
+}
+.testimonials__controls li:hover {
+  background-color: #fff;
+}
+
 .services__wrapper {
   padding: 97px 0 101px;
   display: -webkit-box;

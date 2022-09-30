@@ -1,0 +1,70 @@
+.testimonials {
+  &__wrapper {
+    width: 100%;
+    padding: 97px 0 164px;
+    background-image: url('../../../../assets/images/bg-testimonials.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    @include flex-center;
+    @include flex-direction(column);
+  }
+
+  &__title { color: $white; }
+
+  &__para {
+    width: 50%;
+    margin: 22px 0 83px;
+    color: $white;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  &__lists {
+    width: 71.3%;
+    color: $white;
+    gap: 58px;
+    @include flex-center(flex-start, center);
+  }
+  
+  &__figure {
+    width: 127px;
+    height: 127px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    @include flex-shrink(0);
+  }
+
+  &__comment {
+    padding: 0 10px 0 0;
+    margin: 35px 0 17px;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+
+  &__name {
+    display: block;
+    font-size: 18px;
+    font-style: italic;
+    text-align: right;
+    text-transform: capitalize;
+  }
+
+  &__controls {
+    margin-top: 63px;
+    gap: 29px;
+    @include flex-center;
+
+    li {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $greyLight;
+      text-indent: -99999px;
+      @include transition;
+
+      &:first-child { background-color: $white; }
+      &:hover { background-color: $white; }
+    }
+  }
+}
