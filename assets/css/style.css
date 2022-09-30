@@ -1,8 +1,6 @@
-@charset "utf-8";
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
-
 /* 1.1. Eric Meyers Reset
    http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -30,16 +28,19 @@ footer, header, hgroup, menu, nav, section {
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
-
-input[type='radio'] { vertical-align: text-bottom; }
+input[type=radio] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
-input[type='button'],
-input[type='submit'],
+input[type=button],
+input[type=submit],
 button {
   cursor: pointer;
 }
@@ -50,7 +51,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,30 +69,63 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -0.7em;
+}
+
+sub {
+  bottom: -0.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
-
 .cf:before,
 .cf:after {
   display: table;
   content: " ";
 }
 
-.cf:after { clear: both; }
-.cf { *zoom: 1; }
-
-/*for all*/
-body {
-  box-sizing: border-box;
-  font-family: sans-serif;
+.cf:after {
+  clear: both;
 }
 
-a { 
+.cf {
+  *zoom: 1;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+span {
   display: inline-block;
-  text-decoration: none; 
+}
+
+::first-letter {
+  text-transform: uppercase;
+}
+
+body {
+  font-family: sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 li {
@@ -99,56 +135,111 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1366px;
+  width: 91.2%;
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
+.header {
+  width: 100%;
+  position: absolute;
+}
+.header__wrapper {
+  padding: 15px 0;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.header__hamburger {
+  width: 30px;
+  height: 30px;
+  border: 3px solid #fff;
+  border-radius: 3px;
+  display: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 4;
+  cursor: pointer;
+}
+.header__hamburger--bar {
+  width: 20px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  text-indent: -99999px;
+}
+.header__hamburger--bar::before, .header__hamburger--bar::after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.header__hamburger--bar::before {
+  top: -6px;
+}
+.header__hamburger--bar::after {
+  top: 6px;
+}
+.header__hamburger:hover .header__hamburger--bar {
+  -webkit-transform: translate(-50%, -50%) rotate(-225deg);
+  -ms-transform: translate(-50%, -50%) rotate(-225deg);
+  transform: translate(-50%, -50%) rotate(-225deg);
+}
+.header__hamburger:hover .header__hamburger--bar::before {
+  display: none;
+}
+.header__hamburger:hover .header__hamburger--bar::after {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.header__nav--menu {
+  margin-right: 45px;
+  gap: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.header__nav--menu a {
+  padding: 3px 0;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.header__nav--menu a:hover {
+  border-color: #fff;
+}
 
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
-/*=================================
-  main styling starts here
-=================================*/
-
-
-
-
-
-
-
-
-/*=================================
-  main styling ends here
-=================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+/*# sourceMappingURL=style.css.map */
