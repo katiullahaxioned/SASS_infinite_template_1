@@ -55,12 +55,14 @@
         @include transition;
       }
 
-      &:hover::before {
-        @include animation(indicate .3s linear);
-        @include keyframes(indicate) {
-          0%, 100% { top: 50%; }
-          40% { top: 40%; }
-          70% { top: 60%; }
+      @include responsive-min($ipadLandscape) {
+        &:hover::before {
+          @include animation(indicate .3s linear);
+          @include keyframes(indicate) {
+            0%, 100% { top: 50%; }
+            40% { top: 40%; }
+            70% { top: 60%; }
+          }
         }
       }
     }

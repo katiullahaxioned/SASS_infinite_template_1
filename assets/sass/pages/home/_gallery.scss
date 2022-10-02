@@ -15,8 +15,10 @@
 
       img { @include transition; }
 
-      &:hover img {
-        @include transform(scale(1.1));
+      @include responsive-min($ipadLandscape) {
+        &:hover img {
+          @include transform(scale(1.1));
+        }
       }
     }
   }
@@ -50,7 +52,10 @@
       @include transition;
 
       &:first-child { background-color: $blueLight; }
-      &:hover { background-color: $blueLight; }
+
+      @include responsive-min($ipadLandscape) {
+        &:hover { background-color: $blueLight; }
+      }
     }
   }
 }

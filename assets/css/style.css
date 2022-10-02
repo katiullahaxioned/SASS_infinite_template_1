@@ -162,11 +162,13 @@ li {
   font-size: 19px;
   text-transform: capitalize;
 }
-.button:hover {
-  background-color: #fff;
-  color: #3172A3;
-  -webkit-box-shadow: inset 0 0 0 3px #3172A3;
-  box-shadow: inset 0 0 0 3px #3172A3;
+@media only screen and (min-width: 1024px) {
+  .button:hover {
+    background-color: #fff;
+    color: #3172A3;
+    -webkit-box-shadow: inset 0 0 0 3px #3172A3;
+    box-shadow: inset 0 0 0 3px #3172A3;
+  }
 }
 
 /*for wrapper*/
@@ -274,8 +276,10 @@ li {
   font-size: 20px;
   text-transform: capitalize;
 }
-.header__nav--menu a:hover {
-  border-color: #fff;
+@media only screen and (min-width: 1024px) {
+  .header__nav--menu a:hover {
+    border-color: #fff;
+  }
 }
 
 .banner__wrapper {
@@ -354,30 +358,32 @@ li {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.banner__indicator span:hover::before {
-  -webkit-animation: indicate 0.3s linear;
-  animation: indicate 0.3s linear;
-}
-@-webkit-keyframes indicate {
-  0%, 100% {
-    top: 50%;
+@media only screen and (min-width: 1024px) {
+  .banner__indicator span:hover::before {
+    -webkit-animation: indicate 0.3s linear;
+    animation: indicate 0.3s linear;
   }
-  40% {
-    top: 40%;
+  @-webkit-keyframes indicate {
+    0%, 100% {
+      top: 50%;
+    }
+    40% {
+      top: 40%;
+    }
+    70% {
+      top: 60%;
+    }
   }
-  70% {
-    top: 60%;
-  }
-}
-@keyframes indicate {
-  0%, 100% {
-    top: 50%;
-  }
-  40% {
-    top: 40%;
-  }
-  70% {
-    top: 60%;
+  @keyframes indicate {
+    0%, 100% {
+      top: 50%;
+    }
+    40% {
+      top: 40%;
+    }
+    70% {
+      top: 60%;
+    }
   }
 }
 
@@ -404,8 +410,10 @@ li {
 .services__wrapper .section-para a {
   color: #3172A3;
 }
-.services__wrapper .section-para a:hover {
-  text-decoration: underline;
+@media only screen and (min-width: 1024px) {
+  .services__wrapper .section-para a:hover {
+    text-decoration: underline;
+  }
 }
 .services__wrapper .section-para span {
   color: #333;
@@ -607,8 +615,10 @@ li {
 .testimonials__controls li:first-child {
   background-color: #fff;
 }
-.testimonials__controls li:hover {
-  background-color: #fff;
+@media only screen and (min-width: 1024px) {
+  .testimonials__controls li:hover {
+    background-color: #fff;
+  }
 }
 
 .gallery__wrapper {
@@ -648,10 +658,12 @@ li {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.gallery__lists--item:hover img {
-  -webkit-transform: scale(1.1);
-  -ms-transform: scale(1.1);
-  transform: scale(1.1);
+@media only screen and (min-width: 1024px) {
+  .gallery__lists--item:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 .gallery__title {
   position: relative;
@@ -692,8 +704,10 @@ li {
 .gallery__controls li:first-child {
   background-color: #3172A3;
 }
-.gallery__controls li:hover {
-  background-color: #3172A3;
+@media only screen and (min-width: 1024px) {
+  .gallery__controls li:hover {
+    background-color: #3172A3;
+  }
 }
 
 .contact__wrapper {
@@ -802,9 +816,11 @@ li {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.contact__form--control input:hover {
-  background-color: #fff;
-  color: #3172A3;
+@media only screen and (min-width: 1024px) {
+  .contact__form--control input:hover {
+    background-color: #fff;
+    color: #3172A3;
+  }
 }
 .contact__details {
   gap: 50px;
@@ -827,9 +843,11 @@ li {
   font-size: 19px;
   text-transform: capitalize;
 }
-.contact__details a:hover {
-  color: #000;
-  text-shadow: 0 0 5px #fff;
+@media only screen and (min-width: 1024px) {
+  .contact__details a:hover {
+    color: #000;
+    text-shadow: 0 0 5px #fff;
+  }
 }
 .contact__details a::before {
   margin-right: 28px;
@@ -876,8 +894,10 @@ li {
   color: #fff;
   text-transform: uppercase;
 }
-.footer a:hover {
-  text-decoration: underline;
+@media only screen and (min-width: 1024px) {
+  .footer a:hover {
+    text-decoration: underline;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

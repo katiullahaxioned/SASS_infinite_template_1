@@ -67,7 +67,10 @@
       @include transition;
 
       &:first-child { background-color: $white; }
-      &:hover { background-color: $white; }
+      
+      @include responsive-min($ipadLandscape) {
+        &:hover { background-color: $white; }
+      }
     }
   }
 }

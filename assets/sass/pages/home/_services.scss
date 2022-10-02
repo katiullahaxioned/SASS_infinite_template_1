@@ -10,7 +10,9 @@
       a {
         color: $blueLight;
 
-        &:hover { text-decoration: underline; }
+        @include responsive-min($ipadLandscape) {
+          &:hover { text-decoration: underline; }
+        }
       }
 
       span {

@@ -19,6 +19,8 @@
     color: $white;
     text-transform: uppercase;
 
-    &:hover { text-decoration: underline; }
+    @include responsive-min($ipadLandscape) {
+      &:hover { text-decoration: underline; }
+    }
   }
 }

@@ -81,9 +81,11 @@
         text-transform: capitalize;
         @include transition;
 
-        &:hover {
-          background-color: $white;
-          color: $blueLight;
+        @include responsive-min($ipadLandscape) {
+          &:hover {
+            background-color: $white;
+            color: $blueLight;
+          }
         }
       }
     }
@@ -99,9 +101,11 @@
       font-size: 19px;
       text-transform: capitalize;
 
-      &:hover {
-        color: $black;
-        text-shadow: 0 0 5px $white;
+      @include responsive-min($ipadLandscape) {
+        &:hover {
+          color: $black;
+          text-shadow: 0 0 5px $white;
+        }
       }
 
       &::before {
