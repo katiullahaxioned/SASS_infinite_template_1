@@ -1,7 +1,7 @@
 .contact {
   &__wrapper {
     width: 100%;
-    padding: 63px 0 174px;
+    padding: 65px 0 174px;
     background-image: url('../../../../assets/images/contact-us.jpg');
     background-attachment: fixed;
     background-size: cover;
@@ -13,10 +13,112 @@
 
   &__para {
     width: 75%;
-    margin: 22px 0 73px;
+    margin: 22px 0 71px;
     color: $white;
     font-size: 19px;
     text-align: center;
     word-spacing: 2px;
+  }
+
+  &__main {
+    width: 75%;
+    gap: 62px;
+    @include flex-center(flex-start, space-between);
+  }
+
+  &__form,
+  &__details {
+    @include flex-basis(50%);
+  }
+
+  &__form {
+    gap: 20px;
+    @include flex-center(flex-start, flex-start);
+    @include flex-direction(column);
+
+    &--group {
+      width: 100%;
+
+      >* {
+        width: 93%;
+        padding: 11px 20px;
+        border: 1px solid $white;
+        border-radius: 5px;
+        background-color: transparent;
+        color: $white;
+        font-size: 19px;
+
+        &::placeholder {
+          color: $white;
+          text-transform: capitalize;
+        }
+      }
+
+      textarea {
+        min-height: 260px;
+        resize: vertical;
+
+        &::-webkit-resizer {
+          border: 9px solid transparent;
+          border-right-color: $white;
+          border-bottom-color: $white;
+          border-radius: 3px;
+        }
+      }
+    }
+
+    &--control {
+      width: 51.7%;
+
+      input {
+        width: 100%;
+        padding: 11px 30px;
+        border: none;
+        border-radius: 3px;
+        background-color: $blueMid;
+        color: $white;
+        font-size: 18px;
+        text-transform: capitalize;
+        @include transition;
+
+        &:hover {
+          background-color: $white;
+          color: $blueLight;
+        }
+      }
+    }
+  }
+
+  &__details {
+    gap: 50px;
+    @include flex-center(flex-start, flex-start);
+    @include flex-direction(column);
+    
+    a {
+      color: $white;
+      font-size: 19px;
+      text-transform: capitalize;
+
+      &::before {
+        margin-right: 28px;
+        font-size: 36px;
+        font-family: "fontAwesome";
+        font-weight: 600;
+      }
+    }
+
+    li:nth-child(2) {
+      a { text-transform: lowercase; }
+    } 
+
+    @each $key, $value in $contactIcon {
+      li {
+        &:nth-child(#{$key}) {
+          a {
+            &::before { content: "#{$value}"; }
+          }
+        }
+      }
+    } 
   }
 }

@@ -7,12 +7,20 @@
 }
 
 html { scroll-behavior: smooth; }
-span { display: inline-block; }
-p { line-height: 2; }
-p::first-letter { text-transform: uppercase; }
+
 body {
   font-family: sans-serif;
   @include box-sizing;
+}
+
+span { display: inline-block; }
+p { line-height: 2; }
+p::first-letter { text-transform: uppercase; }
+
+input[type],
+textarea,
+button {
+  outline: none;
 }
 
 a { 
@@ -39,11 +47,11 @@ li {
 }
 
 .button {
-  text-transform: capitalize;
+  padding: 14px 30px;
+  background-color: $blueMid;
   color: $white;
   font-size: 19px;
-  background-color: $blueMid;
-  padding: 14px 30px;
+  text-transform: capitalize;
 
   &:hover {
     background-color: $white;
