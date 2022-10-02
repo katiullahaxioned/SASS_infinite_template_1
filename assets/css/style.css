@@ -598,6 +598,7 @@ li {
   height: 15px;
   border-radius: 50%;
   background-color: #A4ADAF;
+  cursor: pointer;
   text-indent: -99999px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -682,6 +683,7 @@ li {
   height: 15px;
   border-radius: 50%;
   background-color: #A4ADAF;
+  cursor: pointer;
   text-indent: -99999px;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
@@ -825,6 +827,10 @@ li {
   font-size: 19px;
   text-transform: capitalize;
 }
+.contact__details a:hover {
+  color: #000;
+  text-shadow: 0 0 5px #fff;
+}
 .contact__details a::before {
   margin-right: 28px;
   font-size: 36px;
@@ -845,6 +851,33 @@ li {
 }
 .contact__details li:nth-child(4) a::before {
   content: "\f098";
+}
+
+.container {
+  position: relative;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 23px;
+}
+.footer__wrapper {
+  position: relative;
+}
+.footer p {
+  color: #fff;
+  font-size: 15px;
+  text-align: center;
+  text-transform: capitalize;
+  word-spacing: 2px;
+}
+.footer a {
+  color: #fff;
+  text-transform: uppercase;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */

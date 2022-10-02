@@ -99,6 +99,11 @@
       font-size: 19px;
       text-transform: capitalize;
 
+      &:hover {
+        color: $black;
+        text-shadow: 0 0 5px $white;
+      }
+
       &::before {
         margin-right: 28px;
         font-size: 36px;
