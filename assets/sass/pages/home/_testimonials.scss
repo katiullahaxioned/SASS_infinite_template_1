@@ -32,8 +32,20 @@
     gap: 58px;
     @include flex-center(flex-start, center);
     @include responsive-max($ipadLandscape) { width: 100%; }
+    
+    @include responsive-max($miniIpad) {
+      gap: 30px;
+
+      li:last-child { display: none; }
+    }
+
+    @include responsive-max($iphone) {
+      li:not(:first-child) { display: none; }
+    }
+
   }
   
+
   &__figure {
     width: 127px;
     height: 127px;
@@ -71,7 +83,7 @@
     right: 3px;
     gap: 30px;
     @include flex-center;
-    
+
     @include responsive-max($ipadLandscape) {
       margin-top: 50px;
       right: 0;

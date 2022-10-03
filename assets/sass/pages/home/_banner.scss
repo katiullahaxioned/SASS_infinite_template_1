@@ -5,6 +5,8 @@
     overflow: hidden;
     position: relative;
     @include flex-center;
+
+    @include responsive-max($miniIpad) { height: 100vh; }
   }
 
   &__figure {
@@ -34,6 +36,7 @@
     text-shadow: 1px 1px 1px $black;
 
     @include responsive-max($ipadLandscape) { font-size: 42px; }
+    @include responsive-max($iphone) { font-size: 36px; }
   }
 
   &__para {
@@ -42,10 +45,18 @@
     line-height: 1.5;
 
     @include responsive-max($ipadLandscape) { font-size: 18px; }
+    @include responsive-max($iphone) { font-size: 16px; }
   }
 
   &__indicator {
     @include position(absolute, bottom, 97px, left, 45.3%);
+    
+    @include responsive-max($ipadLandscape) {
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+
+    @include responsive-max($miniIpad) { bottom: 60px; }
 
     span {
       padding: 11px 56px;
@@ -70,6 +81,11 @@
             70% { top: 60%; }
           }
         }
+      }
+
+      @include responsive-max($miniIpad) {
+        padding: 11px 40px;
+        font-size: 32px;
       }
     }
   }

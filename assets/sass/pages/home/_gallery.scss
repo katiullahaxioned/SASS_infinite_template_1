@@ -30,6 +30,18 @@
           @include transform(scale(1.1));
         }
       }
+
+      @include responsive-max($miniIpad) {
+        &:not(:nth-child(1), :nth-child(2), :nth-child(3)) { display: none; }
+      }
+
+      @include responsive-max($phone) {
+        &:not(:nth-child(1), :nth-child(2)) { display: none; }
+      }
+
+      @include responsive-max($iphone) { 
+        &:not(:first-child) { display: none; }
+      }
     }
   }
 

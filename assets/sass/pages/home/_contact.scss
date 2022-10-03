@@ -8,7 +8,7 @@
     @include flex-center;
     @include flex-direction(column);
 
-    @include responsive-max($ipadLandscape) { padding: 80px 3% 120px; }
+    @include responsive-max($ipadLandscape) { padding: 80px 3% 174px; }
   }
 
   &__title { color: $white; }
@@ -37,11 +37,20 @@
       width: 100%;
       gap: 30px;
     }
+    
+    @include responsive-max($miniIpad) {
+      gap: 70px;
+      @include flex-wrap(wrap);
+    }
   }
 
   &__form,
   &__details {
     @include flex-basis(50%);
+    
+    @include responsive-max($miniIpad) {
+      @include flex(1,0,100%);
+    }
   }
 
   &__form {
@@ -76,6 +85,8 @@
         min-height: 260px;
         resize: vertical;
 
+        @include responsive-max($miniIpad) { min-height: 200px; }
+
         &::-webkit-resizer {
           border: 9px solid transparent;
           border-right-color: $white;
@@ -86,10 +97,12 @@
     }
 
     &--control {
-      width: 51.7%;
+      width: 100%;
+
+      @include responsive-max($miniIpad) { text-align: center; }
 
       input {
-        width: 100%;
+        width: 51.7%;
         padding: 11px 30px;
         border: none;
         border-radius: 3px;
@@ -113,6 +126,11 @@
     gap: 50px;
     @include flex-center(flex-start, flex-start);
     @include flex-direction(column);
+
+    @include responsive-max($miniIpad) {
+      gap: 30px;
+      @include align-items(center);
+    }
     
     a {
       color: $white;

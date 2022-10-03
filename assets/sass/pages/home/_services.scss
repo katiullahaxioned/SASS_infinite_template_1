@@ -8,6 +8,12 @@
       width: 100%;
       padding: 80px 3%;
     }
+
+    @include responsive-max($miniIpad) {
+      text-align: center;
+
+      > * { width: 100%; }
+    }
     
     .section-para {
       padding: 0 15px 0 0;
@@ -34,13 +40,24 @@
     gap: 10px;
     @include flex-center(flex-start, space-between);
     @include flex-wrap(wrap);
+    @include responsive-max($miniIpad) { gap: 0; }
 
     &--item {
       gap: 28px;
       @include flex-center(flex-start, center);
       @include flex-basis(49.3%);
-
+      
       @include responsive-max($ipadLandscape) { gap: 10px; }
+      
+      @include responsive-max($miniIpad) {
+        padding: 30px 0;
+        border-bottom: 1px solid $blueLight;
+        @include align-items(center);
+        @include flex(1, 0, 100%);
+        @include flex-direction(column);
+
+        &:last-child { border-bottom: none; }
+      }
 
       .services__logo {
         width: 75px;
