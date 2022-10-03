@@ -3,10 +3,18 @@
     padding: 97px 0 101px;
     @include flex-center(flex-start, center);
     @include flex-direction(column);
+
+    @include responsive-max($ipadLandscape) {
+      width: 100%;
+      padding: 80px 3%;
+    }
     
     .section-para {
       padding: 0 15px 0 0;
       margin: 24px 0 81px;
+
+      @include responsive-max($ipadLandscape) { margin: 24px 0 40px; }
+      
       a {
         color: $blueLight;
 
@@ -32,6 +40,8 @@
       @include flex-center(flex-start, center);
       @include flex-basis(49.3%);
 
+      @include responsive-max($ipadLandscape) { gap: 10px; }
+
       .services__logo {
         width: 75px;
         height: 53px;
@@ -40,6 +50,11 @@
         font-size: 49px;
         text-indent: -99999px;
         @include flex-shrink(0);
+
+        @include responsive-max($ipad) {
+          width: 65px;
+          font-size: 40px;
+        }
       }
 
       @each $key, $value in $servicesIcon {
@@ -56,11 +71,19 @@
         color: $blueLight;
         font-size: 33px;
         text-transform: capitalize;
+
+        @include responsive-max($ipadLandscape) {
+          font-size: 28px;
+        }
       }
 
       &:nth-child(1),
       &:nth-child(2) {
-        p { margin: 24px 0 70px; }
+        p {
+          margin: 24px 0 70px;
+        
+          @include responsive-max($ipadLandscape) { margin: 24px 0 30px; }
+        }
       }
 
       &:nth-child(3),

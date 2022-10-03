@@ -38,12 +38,20 @@ li {
   color: $blueLight;
   font-size: 43px;
   text-transform: capitalize;
+
+  @include responsive-max($ipadLandscape) {
+    font-size: 36px;
+  }
 }
 
 .section-para {
   color: $greyMid;
   font-size: 18px;
   word-spacing: 3px;
+
+  @include responsive-max($ipadLandscape) {
+    font-size: 16px;
+  }
 }
 
 .button {
@@ -52,6 +60,10 @@ li {
   color: $white;
   font-size: 19px;
   text-transform: capitalize;
+
+  @include responsive-max($ipadLandscape) {
+    font-size: 17px;
+  }
 
   @include responsive-min($ipadLandscape) {
     &:hover {

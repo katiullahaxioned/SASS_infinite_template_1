@@ -18,6 +18,8 @@
   }
 
   &__content {
+    width: 100%;
+    padding: 0 10px;
     color: $white;
     text-align: center;
     text-transform: capitalize;
@@ -30,12 +32,16 @@
     font-size: 58px;
     letter-spacing: 1px;
     text-shadow: 1px 1px 1px $black;
+
+    @include responsive-max($ipadLandscape) { font-size: 42px; }
   }
 
   &__para {
     margin: 8px 0;
     font-size: 20px;
     line-height: 1.5;
+
+    @include responsive-max($ipadLandscape) { font-size: 18px; }
   }
 
   &__indicator {

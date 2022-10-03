@@ -7,6 +7,8 @@
     background-size: cover;
     @include flex-center;
     @include flex-direction(column);
+
+    @include responsive-max($ipadLandscape) { padding: 80px 3% 120px; }
   }
 
   &__title { color: $white; }
@@ -18,12 +20,23 @@
     font-size: 19px;
     text-align: center;
     word-spacing: 2px;
+
+    @include responsive-max($ipadLandscape) {
+      width: 100%;
+      margin: 22px 0 50px;
+      font-size: 16px;
+    }
   }
 
   &__main {
     width: 75%;
     gap: 62px;
     @include flex-center(flex-start, space-between);
+
+    @include responsive-max($ipadLandscape) {
+      width: 100%;
+      gap: 30px;
+    }
   }
 
   &__form,
@@ -47,6 +60,11 @@
         background-color: transparent;
         color: $white;
         font-size: 19px;
+
+        @include responsive-max($ipadLandscape) {
+          width: 100%;
+          font-size: 16px;
+        }
 
         &::placeholder {
           color: $white;
@@ -107,6 +125,8 @@
           text-shadow: 0 0 5px $white;
         }
       }
+
+      @include responsive-max($ipadLandscape) { font-size: 17px; }
 
       &::before {
         margin-right: 28px;

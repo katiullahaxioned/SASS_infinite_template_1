@@ -3,12 +3,22 @@
     padding: 109px 0 94px;
     @include flex-center;
     @include flex-direction(column);
+
+    @include responsive-max($ipadLandscape) {
+      width: 100%;
+      padding: 80px 3%;
+    }
   }
 
   &__lists {
     padding: 0 2% 0 .5%;
     gap: 31px;
     @include flex-center;
+
+    @include responsive-max($ipadLandscape) {
+      padding: 0;
+      gap: 20px;
+    }
     
     &--item {
       overflow: hidden;
@@ -26,6 +36,8 @@
   &__title {
     position: relative;
     right: 10px;
+
+    @include responsive-max($ipadLandscape) { right: 0; }
   }
   
   &__para {
@@ -33,6 +45,11 @@
     margin: 22px 0 83px;
     font-size: 14px;
     text-align: center;
+
+    @include responsive-max($ipadLandscape) {
+      width: 100%;
+      margin: 22px 0 50px;
+    }
   }
 
   &__controls {
@@ -41,6 +58,8 @@
     right: 8px;
     gap: 29px;
     @include flex-center;
+
+    @include responsive-max($ipadLandscape) { right: 0; }
 
     li {
       width: 15px;
